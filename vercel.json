@@ -1,0 +1,48 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/courses/capcut-para-celular/:path*", "destination": "https://cursos.enmodovideo.com/cursos/capcut-celular", "permanent": true },
+    { "source": "/courses/capcut-pc-de-cero-a-pro/:path*", "destination": "https://cursos.enmodovideo.com/cursos/capcut-pc-de-cero-a-pro", "permanent": true },
+    { "source": "/product/capcut-celular/:path*", "destination": "https://cursos.enmodovideo.com/cursos/capcut-celular", "permanent": true },
+    { "source": "/product/capcut-pc-de-cero-a-pro/:path*", "destination": "https://cursos.enmodovideo.com/cursos/capcut-pc-de-cero-a-pro", "permanent": true },
+    { "source": "/courses/:path*", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/cursos", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/cursos/:path+", "destination": "https://cursos.enmodovideo.com/cursos/:path+", "permanent": true },
+    { "source": "/lesson/:path*", "destination": "https://cursos.enmodovideo.com/mis-cursos", "permanent": true },
+    { "source": "/dashboard/:path*", "destination": "https://cursos.enmodovideo.com/mis-cursos", "permanent": true },
+    { "source": "/my-account/:path*", "destination": "https://cursos.enmodovideo.com/mi-cuenta", "permanent": true },
+    { "source": "/user-account/:path*", "destination": "https://cursos.enmodovideo.com/mi-cuenta", "permanent": true },
+    { "source": "/user-login/:path*", "destination": "https://cursos.enmodovideo.com/ingresar", "permanent": true },
+    { "source": "/user-register/:path*", "destination": "https://cursos.enmodovideo.com/registro", "permanent": true },
+    { "source": "/student-registration/:path*", "destination": "https://cursos.enmodovideo.com/registro", "permanent": true },
+    { "source": "/forgot-password/:path*", "destination": "https://cursos.enmodovideo.com/recuperar", "permanent": true },
+    { "source": "/reset-password/:path*", "destination": "https://cursos.enmodovideo.com/recuperar", "permanent": true },
+    { "source": "/shop/:path*", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/cart/:path*", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/checkout/:path*", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/precios/:path*", "destination": "https://cursos.enmodovideo.com", "permanent": true },
+    { "source": "/terms-condition/:path*", "destination": "https://cursos.enmodovideo.com/terminos", "permanent": true },
+    { "source": "/term-conditions/:path*", "destination": "https://cursos.enmodovideo.com/terminos", "permanent": true },
+    { "source": "/privacy-policy/:path*", "destination": "https://cursos.enmodovideo.com/privacidad", "permanent": true },
+    { "source": "/privacy-policy-2/:path*", "destination": "https://cursos.enmodovideo.com/privacidad", "permanent": true },
+    { "source": "/contacto/:path*", "destination": "https://wa.me/51906583864", "permanent": false },
+    { "source": "/wp-login.php", "destination": "/", "permanent": true },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}
