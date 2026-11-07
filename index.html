@@ -55,9 +55,8 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 
   /* Encabezado mínimo */
-  header { padding: 40px 0 28px; text-align: center; }
+  header.wrap { padding: 36px 16px 26px; text-align: center; }
   header img { height: 38px; width: auto; margin: 0 auto; }
-  header p { margin: 14px auto 0; max-width: 30rem; color: var(--muted); font-size: 1.05rem; }
 
   /* Bloques */
   .blocks { display: flex; flex-direction: column; gap: 18px; padding-bottom: 18px; }
@@ -121,7 +120,7 @@
   .social svg { width: 20px; height: 20px; }
 
   @media (max-width: 720px) {
-    header { padding: 28px 0 20px; }
+    header.wrap { padding: 24px 16px 18px; }
     header img { height: 32px; }
     .block { grid-template-columns: 1fr; min-height: 0; }
     .block:nth-child(even) .block__media { order: 0; }
@@ -144,7 +143,6 @@
 
 <header class="wrap">
   <a href="/" aria-label="En Modo Video — inicio"><img src="/img/logo-completo-blanco.png" width="817" height="160" alt="En Modo Video"></a>
-  <p>Aprende a editar videos con CapCut e IA. Elige cómo quieres hacerlo:</p>
 </header>
 
 <main class="wrap">
